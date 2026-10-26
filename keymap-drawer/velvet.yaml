@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: velvet}
 layers:
   CMKDH:
-  - Esc
+  - {t: '`', s: '~'}
   - {t: '1', s: '!'}
   - {t: '2', s: '@'}
   - {t: '3', s: '#'}
@@ -12,14 +12,14 @@ layers:
   - {t: '8', s: '*'}
   - {t: '9', s: (}
   - {t: '0', s: )}
-  - {t: '$$mdi:backspace-outline$$', type: backspace}
+  - Gui+$$mdi:backspace-reverse$$
   - Esc
   - Q
   - W
   - F
   - P
   - B
-  - '&mkp RCLK'
+  - NEXT
   - J
   - L
   - U
@@ -32,7 +32,7 @@ layers:
   - {t: S, h: Ctrl}
   - {t: T, h: Shift}
   - G
-  - '&mkp MCLK'
+  - {t: GAMING, h: to}
   - M
   - {t: N, h: Shift}
   - {t: E, h: Ctrl}
@@ -45,23 +45,23 @@ layers:
   - C
   - D
   - V
-  - '&mkp LCLK'
+  - PREV
   - K
   - H
   - {t: ',', s: <}
   - {t: ., s: '>'}
   - {t: /, s: '?'}
   - {t: '-', s: _}
-  - $$mdi:volume-mute$$
-  - $$mdi:play-pause$$
+  - '&mkp LCLK'
+  - '&mkp RCLK'
   - {t: Delete, h: WM}
   - SYMNUM
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - FN
-  - {t: Caps, h: to GAMING}
-  - SCROLL
-  - PRECISION
+  - $$mdi:apple-keyboard-caps$$
+  - $$mdi:arrow-left$$
+  - $$mdi:arrow-right$$
   GAMING:
   - Esc
   - {t: '1', s: '!'}
@@ -210,7 +210,7 @@ layers:
   - $$mdi:volume-minus$$
   - $$mdi:volume-plus$$
   - $$mdi:play-pause$$
-  - {type: none}
+  - $$mdi:play-pause$$
   - {type: none}
   - {type: none}
   - {t: F6, h: Cmd}
@@ -499,15 +499,5 @@ layers:
 combos:
 - p: [0, 11]
   k: $$mdi:download-circle$$
-- p: [15, 16]
-  k: Esc
-  l: [CMKDH, GAMING]
-- p: [28, 29]
-  k: $$mdi:keyboard-tab$$
-  l: [CMKDH, GAMING]
-- p: [20, 21]
-  k: {t: '$$mdi:backspace-outline$$', type: backspace}
-  l: [CMKDH, GAMING]
-- p: [48, 47]
-  k: {t: '''', s: '"'}
-  l: [CMKDH, GAMING]
+- p: [51, 52]
+  k: '&mkp MCLK'
