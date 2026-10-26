@@ -1,504 +1,513 @@
 layout: {zmk_keyboard: velvet}
 layers:
   CMKDH:
-  - {"t": "Esc"}
-  - {"t": "1"}
-  - {"t": "2"}
-  - {"t": "3"}
-  - {"t": "4"}
-  - {"t": "5"}
-  - {"t": "6"}
-  - {"t": "7"}
-  - {"t": "8"}
-  - {"t": "9"}
-  - {"t": "0"}
-  - {"t": "Backspace"}
-  - {"t": "Esc"}
-  - {"t": "Q"}
-  - {"t": "W"}
-  - {"t": "F"}
-  - {"t": "P"}
-  - {"t": "B"}
-  - {"t": "Right click"}
-  - {"t": "J"}
-  - {"t": "L"}
-  - {"t": "U"}
-  - {"t": "Y"}
-  - {"t": ";"}
-  - {"t": "Backspace"}
-  - {"t": "Tab"}
-  - {"t": "A", "h": "Cmd"}
-  - {"t": "R", "h": "Option"}
-  - {"t": "S", "h": "Ctrl"}
-  - {"t": "T", "h": "Shift"}
-  - {"t": "G"}
-  - {"t": "Middle click"}
-  - {"t": "M"}
-  - {"t": "N", "h": "Shift"}
-  - {"t": "E", "h": "Ctrl"}
-  - {"t": "I", "h": "Option"}
-  - {"t": "O", "h": "Cmd"}
-  - {"t": "'"}
-  - {"t": "="}
-  - {"t": "Z"}
-  - {"t": "X"}
-  - {"t": "C"}
-  - {"t": "D"}
-  - {"t": "V"}
-  - {"t": "Left click"}
-  - {"t": "K"}
-  - {"t": "H"}
-  - {"t": ","}
-  - {"t": "."}
-  - {"t": "/"}
-  - {"t": "−"}
-  - {"t": "Mute"}
-  - {"t": "Play/Pause"}
-  - {"t": "Delete", "h": "WM"}
-  - {"t": "SYMNUM", "h": "hold"}
-  - {"t": "Space"}
-  - {"t": "Enter"}
-  - {"t": "FN", "h": "hold"}
-  - {"t": "Caps", "h": "to GAMING"}
-  - {"t": "SCROLL", "h": "hold"}
-  - {"t": "PRECISION", "h": "hold"}
+  - Esc
+  - {t: '1', s: '!'}
+  - {t: '2', s: '@'}
+  - {t: '3', s: '#'}
+  - {t: '4', s: $}
+  - {t: '5', s: '%'}
+  - {t: '6', s: ^}
+  - {t: '7', s: '&'}
+  - {t: '8', s: '*'}
+  - {t: '9', s: (}
+  - {t: '0', s: )}
+  - {t: '$$mdi:backspace-outline$$', type: backspace}
+  - Esc
+  - Q
+  - W
+  - F
+  - P
+  - B
+  - '&mkp RCLK'
+  - J
+  - L
+  - U
+  - Y
+  - {t: ;, s: ':'}
+  - {t: '$$mdi:backspace-outline$$', type: backspace}
+  - $$mdi:keyboard-tab$$
+  - {t: A, h: Cmd}
+  - {t: R, h: Option}
+  - {t: S, h: Ctrl}
+  - {t: T, h: Shift}
+  - G
+  - '&mkp MCLK'
+  - M
+  - {t: N, h: Shift}
+  - {t: E, h: Ctrl}
+  - {t: I, h: Option}
+  - {t: O, h: Cmd}
+  - {t: '''', s: '"'}
+  - {t: '=', s: +}
+  - Z
+  - X
+  - C
+  - D
+  - V
+  - '&mkp LCLK'
+  - K
+  - H
+  - {t: ',', s: <}
+  - {t: ., s: '>'}
+  - {t: /, s: '?'}
+  - {t: '-', s: _}
+  - $$mdi:volume-mute$$
+  - $$mdi:play-pause$$
+  - {t: Delete, h: WM}
+  - SYMNUM
+  - $$mdi:keyboard-space$$
+  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - FN
+  - {t: Caps, h: to GAMING}
+  - SCROLL
+  - PRECISION
   GAMING:
-  - {"t": "Esc"}
-  - {"t": "1"}
-  - {"t": "2"}
-  - {"t": "3"}
-  - {"t": "4"}
-  - {"t": "5"}
-  - {"t": "6"}
-  - {"t": "7"}
-  - {"t": "8"}
-  - {"t": "9"}
-  - {"t": "0"}
-  - {"t": "Backspace"}
-  - {"t": "Esc"}
-  - {"t": "1"}
-  - {"t": "2"}
-  - {"t": "3"}
-  - {"t": "4"}
-  - {"t": "5"}
-  - {"t": "Right click"}
-  - {"t": "", "type": "none"}
-  - {"t": "", "type": "none"}
-  - {"t": "↑"}
-  - {"t": "", "type": "none"}
-  - {"t": "", "type": "none"}
-  - {"t": "Backspace"}
-  - {"t": "Tab"}
-  - {"t": "Q"}
-  - {"t": "W"}
-  - {"t": "E"}
-  - {"t": "R"}
-  - {"t": "T"}
-  - {"t": "Middle click"}
-  - {"t": "", "type": "none"}
-  - {"t": "←"}
-  - {"t": "↓"}
-  - {"t": "→"}
-  - {"t": "", "type": "none"}
-  - {"t": "", "type": "none"}
-  - {"t": "B"}
-  - {"t": "A"}
-  - {"t": "S"}
-  - {"t": "D"}
-  - {"t": "F"}
-  - {"t": "G"}
-  - {"t": "Left click"}
-  - {"t": "", "type": "none"}
-  - {"t": "", "type": "none"}
-  - {"t": "", "type": "none"}
-  - {"t": "", "type": "none"}
-  - {"t": "", "type": "none"}
-  - {"t": "", "type": "none"}
-  - {"t": "Mute"}
-  - {"t": "Play/Pause"}
-  - {"t": "Ctrl"}
-  - {"t": "Option"}
-  - {"t": "Space"}
-  - {"t": "Enter"}
-  - {"t": "to CMKDH"}
-  - {"t": "to CMKDH"}
-  - {"t": "SCROLL", "h": "hold"}
-  - {"t": "PRECISION", "h": "hold"}
+  - Esc
+  - {t: '1', s: '!'}
+  - {t: '2', s: '@'}
+  - {t: '3', s: '#'}
+  - {t: '4', s: $}
+  - {t: '5', s: '%'}
+  - {t: '6', s: ^}
+  - {t: '7', s: '&'}
+  - {t: '8', s: '*'}
+  - {t: '9', s: (}
+  - {t: '0', s: )}
+  - {t: '$$mdi:backspace-outline$$', type: backspace}
+  - Esc
+  - {t: '1', s: '!'}
+  - {t: '2', s: '@'}
+  - {t: '3', s: '#'}
+  - {t: '4', s: $}
+  - {t: '5', s: '%'}
+  - '&mkp RCLK'
+  - {type: none}
+  - {type: none}
+  - $$mdi:arrow-up$$
+  - {type: none}
+  - {type: none}
+  - {t: '$$mdi:backspace-outline$$', type: backspace}
+  - $$mdi:keyboard-tab$$
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - '&mkp MCLK'
+  - {type: none}
+  - $$mdi:arrow-left$$
+  - $$mdi:arrow-down$$
+  - $$mdi:arrow-right$$
+  - {type: none}
+  - {type: none}
+  - B
+  - A
+  - S
+  - D
+  - F
+  - G
+  - '&mkp LCLK'
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - $$mdi:volume-mute$$
+  - $$mdi:play-pause$$
+  - $$mdi:apple-keyboard-control$$
+  - $$mdi:apple-keyboard-option$$
+  - $$mdi:keyboard-space$$
+  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - {t: CMKDH, h: to}
+  - {t: CMKDH, h: to}
+  - SCROLL
+  - PRECISION
   SYMNUM:
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "~"}
-  - {"t": "Shift+!"}
-  - {"t": "Shift+@"}
-  - {"t": "Shift+#"}
-  - {"t": "Shift+$"}
-  - {"t": "Shift+%"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "Shift+^"}
-  - {"t": "Shift+&"}
-  - {"t": "Shift+*"}
-  - {"t": "|"}
-  - {"t": "\\"}
-  - {"t": "", "type": "none"}
-  - {"t": "`"}
-  - {"t": "1", "h": "Cmd"}
-  - {"t": "2", "h": "Option"}
-  - {"t": "3", "h": "Ctrl"}
-  - {"t": "4", "h": "Shift"}
-  - {"t": "5"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "6"}
-  - {"t": "7", "h": "Shift"}
-  - {"t": "8", "h": "Ctrl"}
-  - {"t": "9", "h": "Option"}
-  - {"t": "0", "h": "Cmd"}
-  - {"t": "", "type": "none"}
-  - {"t": "", "type": "none"}
-  - {"t": "=", "h": "+"}
-  - {"t": "["}
-  - {"t": "{"}
-  - {"t": "("}
-  - {"t": "~"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "`"}
-  - {"t": ")"}
-  - {"t": "}"}
-  - {"t": "]"}
-  - {"t": "−", "h": "_"}
-  - {"t": "", "type": "none"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "", "type": "none"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "", "type": "none"}
-  - {"t": "", "type": "none"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "", "type": "none"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '~'
+  - Sft+!
+  - Sft+@
+  - Sft+#
+  - Sft+$
+  - Sft+%
+  - {t: ▽, type: trans}
+  - Sft+^
+  - Sft+&
+  - Sft+*
+  - '|'
+  - {t: \, s: '|'}
+  - {type: none}
+  - {t: '`', s: '~'}
+  - {t: '1', h: Cmd}
+  - {t: '2', h: Option}
+  - {t: '3', h: Ctrl}
+  - {t: '4', h: Shift}
+  - {t: '5', s: '%'}
+  - {t: ▽, type: trans}
+  - {t: '6', s: ^}
+  - {t: '7', h: Shift}
+  - {t: '8', h: Ctrl}
+  - {t: '9', h: Option}
+  - {t: '0', h: Cmd}
+  - {type: none}
+  - {type: none}
+  - {t: '=', h: +, s: +}
+  - {t: '[', s: '{'}
+  - '{'
+  - (
+  - '~'
+  - {t: ▽, type: trans}
+  - {t: '`', s: '~'}
+  - )
+  - '}'
+  - {t: ']', s: '}'}
+  - {t: '-', h: _, s: _}
+  - {type: none}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: none}
+  - {type: held}
+  - {type: none}
+  - {type: none}
+  - {t: ▽, type: trans}
+  - {type: none}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   FN:
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "", "type": "none"}
-  - {"t": "F1"}
-  - {"t": "F2"}
-  - {"t": "F3"}
-  - {"t": "F4"}
-  - {"t": "F5"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "Mute"}
-  - {"t": "Vol−"}
-  - {"t": "Vol+"}
-  - {"t": "Play/Pause"}
-  - {"t": "", "type": "none"}
-  - {"t": "", "type": "none"}
-  - {"t": "", "type": "none"}
-  - {"t": "F6", "h": "Cmd"}
-  - {"t": "F7", "h": "Option"}
-  - {"t": "F8", "h": "Ctrl"}
-  - {"t": "F9", "h": "Shift"}
-  - {"t": "F10"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "←"}
-  - {"t": "↓", "h": "Shift"}
-  - {"t": "↑", "h": "Ctrl"}
-  - {"t": "→", "h": "Option"}
-  - {"t": "Cmd"}
-  - {"t": "", "type": "none"}
-  - {"t": "", "type": "none"}
-  - {"t": "F11"}
-  - {"t": "F12"}
-  - {"t": "", "type": "none"}
-  - {"t": "", "type": "none"}
-  - {"t": "BT clear"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "BT 1"}
-  - {"t": "BT 2"}
-  - {"t": "BT 3"}
-  - {"t": "BT 4"}
-  - {"t": "BT 5"}
-  - {"t": "", "type": "none"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "", "type": "none"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "Caps"}
-  - {"t": "", "type": "none"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "", "type": "none"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: none}
+  - F1
+  - F2
+  - F3
+  - F4
+  - F5
+  - {t: ▽, type: trans}
+  - $$mdi:volume-mute$$
+  - $$mdi:volume-minus$$
+  - $$mdi:volume-plus$$
+  - $$mdi:play-pause$$
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - {t: F6, h: Cmd}
+  - {t: F7, h: Option}
+  - {t: F8, h: Ctrl}
+  - {t: F9, h: Shift}
+  - F10
+  - {t: ▽, type: trans}
+  - $$mdi:arrow-left$$
+  - {t: ↓, h: Shift}
+  - {t: ↑, h: Ctrl}
+  - {t: →, h: Option}
+  - LGUI
+  - {type: none}
+  - {type: none}
+  - F11
+  - F12
+  - {type: none}
+  - {type: none}
+  - $$mdi:bluetooth-off$$
+  - {t: ▽, type: trans}
+  - {t: '$$mdi:bluetooth-connect$$', h: '1'}
+  - {t: '$$mdi:bluetooth-connect$$', h: '2'}
+  - {t: '$$mdi:bluetooth-connect$$', h: '3'}
+  - {t: '$$mdi:bluetooth-connect$$', h: '4'}
+  - {t: '$$mdi:bluetooth-connect$$', h: '5'}
+  - {type: none}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: none}
+  - {t: ▽, type: trans}
+  - $$mdi:apple-keyboard-caps$$
+  - {type: none}
+  - {type: held}
+  - {type: none}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   MOUSE:
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "Esc"}
-  - {"t": "Bootloader"}
-  - {"t": "Right click"}
-  - {"t": "Move ↑"}
-  - {"t": "Left click"}
-  - {"t": "PrtSc"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "Middle click"}
-  - {"t": "Num 7"}
-  - {"t": "Num 8"}
-  - {"t": "Num 9"}
-  - {"t": "Bootloader"}
-  - {"t": "Ctrl+Option+Delete"}
-  - {"t": "", "type": "none"}
-  - {"t": "Scroll →"}
-  - {"t": "Move ←"}
-  - {"t": "Move ↓"}
-  - {"t": "Move →"}
-  - {"t": "Scroll ↑"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "Left click"}
-  - {"t": "Num 4", "h": "Shift"}
-  - {"t": "Num 5", "h": "Ctrl"}
-  - {"t": "Num 6", "h": "Option"}
-  - {"t": "Num 0", "h": "Cmd"}
-  - {"t": "", "type": "none"}
-  - {"t": "Bootloader"}
-  - {"t": "Scroll ←"}
-  - {"t": "Back"}
-  - {"t": "Middle click"}
-  - {"t": "Forward"}
-  - {"t": "Scroll ↓"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "Right click"}
-  - {"t": "Num 1"}
-  - {"t": "Num 2"}
-  - {"t": "Num 3"}
-  - {"t": "NumLock"}
-  - {"t": "Bootloader"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "", "type": "none"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "", "type": "none"}
-  - {"t": "", "type": "none"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "", "type": "none"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Esc
+  - $$mdi:download-circle$$
+  - '&mkp MB2'
+  - '&mmv MOVE_UP'
+  - '&mkp MB1'
+  - PRINTSCREEN
+  - {t: ▽, type: trans}
+  - '&mkp MCLK'
+  - '7'
+  - '8'
+  - '9'
+  - $$mdi:download-circle$$
+  - Ctl+Alt+$$mdi:backspace-reverse$$
+  - {type: none}
+  - '&msc SCRL_RIGHT'
+  - '&mmv MOVE_LEFT'
+  - '&mmv MOVE_DOWN'
+  - '&mmv MOVE_RIGHT'
+  - '&msc SCRL_UP'
+  - {t: ▽, type: trans}
+  - '&mkp MB1'
+  - {t: '4', h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: '5', h: '$$mdi:apple-keyboard-control$$'}
+  - {t: '6', h: '$$mdi:apple-keyboard-option$$'}
+  - {t: '0', h: LGUI}
+  - {type: none}
+  - $$mdi:download-circle$$
+  - '&msc SCRL_LEFT'
+  - '&mkp MB4'
+  - '&mkp MCLK'
+  - '&mkp MB5'
+  - '&msc SCRL_DOWN'
+  - {t: ▽, type: trans}
+  - '&mkp MB2'
+  - '1'
+  - '2'
+  - '3'
+  - KP NUM
+  - $$mdi:download-circle$$
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: none}
+  - {type: held}
+  - {type: none}
+  - {type: none}
+  - {type: held}
+  - {type: none}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   WM:
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "", "type": "none"}
-  - {"t": "Shift+Cmd+1"}
-  - {"t": "Shift+Cmd+2"}
-  - {"t": "Shift+Cmd+3"}
-  - {"t": "Shift+Cmd+4"}
-  - {"t": "Shift+Cmd+5"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "Shift+Cmd+6"}
-  - {"t": "Shift+Cmd+7"}
-  - {"t": "Shift+Cmd+8"}
-  - {"t": "Shift+Cmd+9"}
-  - {"t": "Shift+Cmd+0"}
-  - {"t": "", "type": "none"}
-  - {"t": "", "type": "none"}
-  - {"t": "Cmd+1"}
-  - {"t": "Cmd+2"}
-  - {"t": "Cmd+3"}
-  - {"t": "Cmd+4"}
-  - {"t": "Cmd+5"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "Cmd+6"}
-  - {"t": "Cmd+7"}
-  - {"t": "Cmd+8"}
-  - {"t": "Cmd+9"}
-  - {"t": "Cmd+0"}
-  - {"t": "", "type": "none"}
-  - {"t": "", "type": "none"}
-  - {"t": "", "type": "none"}
-  - {"t": "", "type": "none"}
-  - {"t": "", "type": "none"}
-  - {"t": "", "type": "none"}
-  - {"t": "", "type": "none"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "", "type": "none"}
-  - {"t": "", "type": "none"}
-  - {"t": "", "type": "none"}
-  - {"t": "", "type": "none"}
-  - {"t": "", "type": "none"}
-  - {"t": "", "type": "none"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "", "type": "none"}
-  - {"t": "", "type": "none"}
-  - {"t": "", "type": "none"}
-  - {"t": "", "type": "none"}
-  - {"t": "", "type": "none"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: none}
+  - {t: Sft+Gui+1, s: Sft+Gui+!}
+  - {t: Sft+Gui+2, s: Sft+Gui+@}
+  - {t: Sft+Gui+3, s: Sft+Gui+#}
+  - {t: Sft+Gui+4, s: Sft+Gui+$}
+  - {t: Sft+Gui+5, s: Sft+Gui+%}
+  - {t: ▽, type: trans}
+  - {t: Sft+Gui+6, s: Sft+Gui+^}
+  - {t: Sft+Gui+7, s: Sft+Gui+&}
+  - {t: Sft+Gui+8, s: Sft+Gui+*}
+  - {t: Sft+Gui+9, s: Sft+Gui+(}
+  - {t: Sft+Gui+0, s: Sft+Gui+)}
+  - {type: none}
+  - {type: none}
+  - {t: Gui+1, s: Gui+!}
+  - {t: Gui+2, s: Gui+@}
+  - {t: Gui+3, s: Gui+#}
+  - {t: Gui+4, s: Gui+$}
+  - {t: Gui+5, s: Gui+%}
+  - {t: ▽, type: trans}
+  - {t: Gui+6, s: Gui+^}
+  - {t: Gui+7, s: Gui+&}
+  - {t: Gui+8, s: Gui+*}
+  - {t: Gui+9, s: Gui+(}
+  - {t: Gui+0, s: Gui+)}
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - {t: ▽, type: trans}
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   SCROLL:
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
   PRECISION:
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
-  - {"t": "▽", "type": "trans"}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
 combos:
-- {"p": [0, 11], "k": "Bootloader"}
-- {"p": [15, 16], "k": "Esc", "l": ["CMKDH", "GAMING"]}
-- {"p": [28, 29], "k": "Tab", "l": ["CMKDH", "GAMING"]}
-- {"p": [20, 21], "k": "Backspace", "l": ["CMKDH", "GAMING"]}
-- {"p": [48, 47], "k": "'", "l": ["CMKDH", "GAMING"]}
+- p: [0, 11]
+  k: $$mdi:download-circle$$
+- p: [15, 16]
+  k: Esc
+  l: [CMKDH, GAMING]
+- p: [28, 29]
+  k: $$mdi:keyboard-tab$$
+  l: [CMKDH, GAMING]
+- p: [20, 21]
+  k: {t: '$$mdi:backspace-outline$$', type: backspace}
+  l: [CMKDH, GAMING]
+- p: [48, 47]
+  k: {t: '''', s: '"'}
+  l: [CMKDH, GAMING]
