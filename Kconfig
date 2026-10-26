@@ -1,0 +1,9 @@
+# SPDX-License-Identifier: MIT
+config ZMK_VELVET_DRAGON_DISPLAY
+    bool "Velvet horizontal dragon-girl display"
+    depends on ZMK_DISPLAY
+    depends on SHIELD_VELVET_LEFT || SHIELD_VELVET_RIGHT
+    help
+      Native 160x68 monochrome artwork and status on both nice!view displays.
+      Uses the existing display hardware and ZMK idle blanking. Select the
+      custom status screen and disable NICE_VIEW_WIDGET_STATUS when enabled.

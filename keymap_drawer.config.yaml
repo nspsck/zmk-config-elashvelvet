@@ -120,6 +120,34 @@ parse_config:
   toggle_label: "to"
 
   raw_binding_map:
+    # Corne Colemak-DH behaviors used by the Velvet port.
+    "&hml LGUI A": {"t": "A", "h": "Cmd"}
+    "&hml LALT R": {"t": "R", "h": "Option"}
+    "&hml LCTRL S": {"t": "S", "h": "Ctrl"}
+    "&hml LSHIFT T": {"t": "T", "h": "Shift"}
+    "&hmr RSHIFT N": {"t": "N", "h": "Shift"}
+    "&hmr RCTRL E": {"t": "E", "h": "Ctrl"}
+    "&hmr RALT I": {"t": "I", "h": "Option"}
+    "&hmr RGUI O": {"t": "O", "h": "Cmd"}
+    "&mod_kp 5 DELETE": {"t": "Delete", "h": "WM"}
+    "&to_kp 1 CAPS": {"t": "Caps", "h": "to GAMING"}
+    "&hml LGUI N1": {"t": "1", "h": "Cmd"}
+    "&hml LALT N2": {"t": "2", "h": "Option"}
+    "&hml LCTRL N3": {"t": "3", "h": "Ctrl"}
+    "&hml LSHIFT N4": {"t": "4", "h": "Shift"}
+    "&hmr RSHIFT N7": {"t": "7", "h": "Shift"}
+    "&hmr RCTRL N8": {"t": "8", "h": "Ctrl"}
+    "&hmr RALT N9": {"t": "9", "h": "Option"}
+    "&hmr RGUI N0": {"t": "0", "h": "Cmd"}
+    "&hml LGUI F6": {"t": "F6", "h": "Cmd"}
+    "&hml LALT F7": {"t": "F7", "h": "Option"}
+    "&hml LCTRL F8": {"t": "F8", "h": "Ctrl"}
+    "&hml LSHIFT F9": {"t": "F9", "h": "Shift"}
+    "&hmr RSHIFT DOWN": {"t": "↓", "h": "Shift"}
+    "&hmr RCTRL UP": {"t": "↑", "h": "Ctrl"}
+    "&hmr RALT RIGHT": {"t": "→", "h": "Option"}
+    "&VELVET_SOFT_OFF": {"t": "", "type": "none"}
+
     # Home-row-mods
     "&hm LEFT_GUI A":
       tap: "A"
