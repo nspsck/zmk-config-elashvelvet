@@ -21,7 +21,7 @@ BUILD_ASSERT(LV_USE_OS == LV_OS_NONE, "Velvet display requires synchronous LVGL 
 BUILD_ASSERT(LV_USE_DRAW_SW && LV_DRAW_SW_DRAW_UNIT_CNT == 1,
              "Velvet display requires one software draw unit");
 
-#if IS_ENABLED(CONFIG_ZMK_BATTERY)
+#if IS_ENABLED(CONFIG_ZMK_BATTERY_REPORTING)
 #include <zmk/battery.h>
 #endif
 #if IS_ENABLED(CONFIG_USB_DEVICE_STACK)
@@ -66,7 +66,7 @@ static zmk_keymap_layer_id_t typing_layer(void) {
 static void read_state(struct velvet_display_state *state) {
     memset(state, 0, sizeof(*state));
     state->central = IS_ENABLED(CONFIG_ZMK_SPLIT_ROLE_CENTRAL);
-#if IS_ENABLED(CONFIG_ZMK_BATTERY)
+#if IS_ENABLED(CONFIG_ZMK_BATTERY_REPORTING)
     state->battery_available = true;
     state->battery_percent = zmk_battery_state_of_charge();
 #endif

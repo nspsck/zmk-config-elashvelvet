@@ -7,7 +7,9 @@ include:
   - board: nice_nano//zmk
     shield: velvet_right nice_view
     snippet: studio-rpc-usb-uart
-    cmake-args: -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_STUDIO_LOCKING=n
+    # DTS is preprocessed before Kconfig; use an explicit software-only flag
+    # for the right-half pointer overrides instead of CONFIG_SHIELD_*.
+    cmake-args: -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_STUDIO_LOCKING=n -DDTS_EXTRA_CPPFLAGS=-DVELVET_RIGHT=1
     artifact-name: velvet_right
   - board: nice_nano//zmk
     shield: settings_reset

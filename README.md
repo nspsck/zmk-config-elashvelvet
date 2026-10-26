@@ -5,27 +5,29 @@ each half and gentler trackball defaults for macOS.
 
 ## Controls
 
-The three typing rows and six primary thumb keys follow
-`zmk-new_corne/config/eyelash_corne.keymap`, including home-row modifiers,
-hold-tap timings, and Escape/Tab/Backspace/Quote combos. Velvet keeps its extra
-number row, three mouse buttons and volume encoder.
+The typing layout started from `zmk-new_corne/config/eyelash_corne.keymap`,
+including home-row modifiers and hold-tap timings. The current bindings include
+the later Velvet customizations: mouse clicks on the two extra left bottom keys,
+a middle-click combo on those keys, dedicated arrows, and media/Gaming controls.
+The number row and volume encoder remain available.
 
 Bottom keys, from left to right on each half:
 
 | Half | 1 | 2 | 3 | 4 | 5 |
 | --- | --- | --- | --- | --- | --- |
-| Left | Mute | Play/Pause | Delete; hold WM | Hold SYMNUM | Space |
-| Right | Enter | Hold FN | Caps; hold to enter GAMING | Hold SCROLL | Hold PRECISION |
+| Left | Left click | Right click | Delete; hold WM | Hold SYMNUM | Space |
+| Right | Enter | Hold FN | Caps | Left arrow | Right arrow |
 
 Layers are `CMKDH`, `GAMING`, `SYMNUM`, `FN`, `MOUSE`, `WM`, `SCROLL`, and
-`PRECISION`. Holding SYMNUM and FN together activates MOUSE/numpad. In GAMING,
-the FN and Caps thumb positions return to CMKDH. The four text combos retain
-their original timing and operate in CMKDH/GAMING. The existing number-row
-Escape + Backspace bootloader combo remains available.
+`PRECISION`. Holding SYMNUM and FN together activates MOUSE/numpad. The middle
+key of the three-key center column enters GAMING; in GAMING, the FN and Caps
+thumb positions return to CMKDH. The bootloader combo remains on logical
+positions 0 + 11 (the two ends of the number row). The original four text
+combos were removed in the customized map.
 
 Corne's RGB actions are inactive because Velvet has no configured RGB strip.
-Its soft-off actions remain conditional on existing soft-off support, which is
-not enabled here. No peripheral-power or backlight action replaces them. The
+Unused soft-off definitions were removed after their bindings were removed.
+No peripheral-power or backlight action replaces them. The
 Corne repository and Velvet's board definitions, GPIO/SPI wiring, matrix,
 sensor orientation/CPI/report interval, power, and BLE settings are unchanged.
 
@@ -37,6 +39,8 @@ sensor orientation/CPI/report interval, power, and BLE settings are unchanged.
 | Scroll | Runtime multiplier/divisor `1/80` (previous default `1/60`) |
 | Precision | One-third of the current normal speed; `1/4` of raw motion with the new defaults |
 
+In the current customized map, Scroll and Precision holds are on the two
+rightmost bottom keys **in GAMING**; those keys are arrows in CMKDH.
 Scroll and precision are momentary: release the key to return to normal.
 Scrolling takes priority when both are held. Precision preserves runtime
 rotation/inversion and never writes persistent settings. Scrolling keeps the
@@ -81,12 +85,16 @@ are examples:
 
 ```sh
 python3 scripts/check_keymap.py
+python3 -B -m unittest discover -s tests -p 'test_keymap_check.py'
 python3 scripts/check_display.py
 ```
 
-The first check compares all 252 mapped bindings, hold-taps and combos with the
-sibling Corne repository. Use `--corne /path/to/eyelash_corne.keymap` for another
-checkout. The second compiles the actual portable renderer with a host C11
+The keymap check validates both halves' preprocessor directives, shared includes,
+layer sizes and position/layer references. It permits intentional remapping and
+does not require the sibling Corne repository. External ZMK headers are stubbed
+for this fast check, so it does not validate their macros or compile Devicetree.
+The build workflow runs this check and its regression tests before starting
+the firmware build. The display check compiles the actual portable renderer with a host C11
 compiler and AddressSanitizer/UndefinedBehaviorSanitizer, checking buffer bounds,
 both roles, battery limits, long names, pointer precedence and animation frames.
 
@@ -101,6 +109,25 @@ Build ZMK firmware workflow still builds `velvet_left nice_view` and
 `velvet_right nice_view`; run it to produce and verify both UF2s before flashing.
 The display is included through this repository's Zephyr module, with no new
 external dependency or shield changes.
+
+## Editing without breaking preprocessing
+
+Keep `behaviors.dtsi` and the keycode/Bluetooth/pointing headers at the top level
+of `config/velvet.keymap`, where both halves can see them. Right-half-only
+trackball overrides live in `config/velvet-pointer.dtsi`, away from the visual
+keymap editor. Keep that local include when editing the keymap. The right build
+passes `-DDTS_EXTRA_CPPFLAGS=-DVELVET_RIGHT=1`; this is a software preprocessor
+flag, with the same board and shield targets as before. Keep that argument in
+local builds too. `CONFIG_SHIELD_*` is a Kconfig symbol and cannot reliably
+select a half during the earlier Devicetree preprocessing stage.
+
+An editor-generated `#` followed by a separate `endif` is not `#endif` and
+leaves its `#if` unterminated. This can prevent `.config` from being generated;
+the [reusable workflow](https://github.com/cormoran/zmk/blob/main%2Bdya/.github/workflows/build-user-config.yml)'s
+unconditional compatibility check then also emits
+“Missing ZMK Compat”. The existing `nice_nano//zmk` board target is correct.
+Check the first error in **West Build**, rather than changing hardware settings
+in response to that secondary annotation.
 
 ## 改键客户端
 https://github.com/cormoran/dya-studio/releases

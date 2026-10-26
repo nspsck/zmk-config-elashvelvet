@@ -1,0 +1,40 @@
+/* Pointer software settings live outside the editable keymap. No hardware
+ * configuration is changed here. Existing DYA Studio settings take precedence
+ * over the runtime processor defaults below. */
+#ifndef VELVET_POINTER_DTSI
+#define VELVET_POINTER_DTSI
+
+#include "velvet-layers.h"
+
+/* build.yaml supplies VELVET_RIGHT through DTS_EXTRA_CPPFLAGS for the right
+ * half only. Kconfig's CONFIG_SHIELD_* symbols do not exist at this stage. */
+#if defined(VELVET_RIGHT)
+#include <input/processors.dtsi>
+#include <input/processors/runtime-input-processor.dtsi>
+
+&mouse_runtime_input_processor {
+    scale-multiplier = <3>;
+    scale-divisor = <4>;
+};
+
+&scroll_runtime_input_processor {
+    scale-multiplier = <1>;
+    scale-divisor = <80>;
+};
+
+&{/trackball_listener} {
+    /* Retain the existing runtime mouse processor and scroll transforms. */
+    scroller { layers = <VELVET_LAYER_SCROLL>; };
+
+    /* One-third of normal speed, preserving any Studio rotation/inversion.
+     * At the default 3/4 normal scale this is 1/4 of raw movement. Releasing
+     * the key restores normal processing without writing persistent settings.
+     * Scrolling wins if both keys are held: scroller is declared first. */
+    precision {
+        layers = <VELVET_LAYER_PRECISION>;
+        input-processors = <&mouse_runtime_input_processor &zip_xy_scaler 1 3>;
+    };
+};
+#endif /* VELVET_RIGHT */
+
+#endif /* VELVET_POINTER_DTSI */
